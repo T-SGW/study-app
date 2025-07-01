@@ -29,6 +29,7 @@
     </dependency>
   </dependencies>
   <build>
+    <finalName>study-app</finalName>
     <plugins>
     <!-- Java 21用コンパイル設定（既に入れてある部分） -->
       <plugin>

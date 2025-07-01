@@ -31,6 +31,6 @@ jobs:
 
       - name: Update Lambda function code
         run: |
-          aws lambda update-function-code \
+            aws lambda update-function-code \
             --function-name StudyAppFunction \
-            --zip-file fileb://target/study-app-1.0-SNAPSHOT.jar
+            --zip-file fileb://target/study-app.jar
