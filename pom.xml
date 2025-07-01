@@ -15,6 +15,18 @@
       <version>5.10.2</version>
       <scope>test</scope>
     </dependency>
+    <!-- Lambda ハンドラーのための AWS Java SDK ライブラリ -->
+    <dependency>
+      <groupId>com.amazonaws</groupId>
+      <artifactId>aws-lambda-java-core</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+    <!-- Jackson for JSON parsing -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.17.1</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -34,6 +46,19 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
       </plugin>
+      <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-shade-plugin</artifactId>
+      <version>3.4.1</version>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>shade</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
     </plugins>
   </build>
 </project>
