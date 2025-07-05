@@ -1,0 +1,7 @@
+{
+  "Effect": "Allow",
+  "Action": [
+    "dynamodb:PutItem"
+  ],
+  "Resource": "arn:aws:dynamodb:ap-northeast-1:<YOUR_ACCOUNT_ID>:table/StudyRecords"
+}
